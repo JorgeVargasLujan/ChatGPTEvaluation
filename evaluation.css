@@ -1,0 +1,123 @@
+:root {
+    --font-base: 1rem;
+    --font-large: 1.5rem;
+    --font-header: 2.5rem;
+    --content-padding: 2vw;
+}
+
+/* General Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    font-size: var(--font-base);
+    background-color: #fbe9e7; /* A warm tone for evaluation */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    background-color: #bf360c;
+    color: white;
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header h1 {
+    font-size: var(--font-header);
+    margin: 0;
+}
+header nav a {
+    margin-left: 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: var(--font-large);
+    transition: color 0.3s ease-in-out;
+}
+header nav a:hover {
+    color: #ffcc00;
+}
+
+/* Main Content */
+.content-block {
+    margin-top: 100px; /* Prevent overlap with the fixed header */
+    text-align: center;
+    padding: var(--content-padding);
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Display Container */
+.display-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: var(--content-padding);
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto; /* Adjusted top margin for closer positioning to the header */
+}
+
+/* Individual Blocks */
+.display-box {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: var(--content-padding);
+    text-align: left;
+    overflow: auto;
+    margin: 10px;
+}
+
+.display-box h3 {
+    color: #bf360c;
+    font-size: var(--font-large);
+    margin-bottom: 1rem;
+}
+
+.display-box p {
+    font-size: var(--font-base);
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Graph Containers */
+canvas {
+    max-width: 100%;
+    height: 300px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Footer */
+footer {
+    background-color: #bf360c;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+footer p {
+    margin: 0;
+    font-size: var(--font-base);
+}
